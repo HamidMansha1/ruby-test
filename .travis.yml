@@ -11,6 +11,6 @@ before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database teacher_test;' -U postgres
   - bundle exec rake db:test:prepare
-############
+##############
 script:
   - bundle exec rails test
