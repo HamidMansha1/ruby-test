@@ -1,0 +1,33 @@
+
+
+######################
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: teacher_development
+  username: hamid
+  password: hamid12
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: teacher_test
+  username: hamid
+  password: hamid12
+  host: localhost
+  port: 5432
+
+# production:
+#   <<: *default
+#   database: teacher_production
+#   username: hamid
+#   password: hamid12
+#   host: your_production_host
+#   port: 5432
